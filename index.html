@@ -9,7 +9,18 @@
     <div class="container">
       <h1 class="text-center">Olá, Bootstrap!</h1>
       <button class="btn btn-primary">Clique aqui</button>
-      <button class="btn btn-primary">Clique aqui!</button>
+      <button class="btn btn-success" id="meuBotao">Clique aqui!</button>
+      <div class="alert alert-success" id="meuAlerta" style="display: none;">Deu certo!</div>
+      <input class="form-control">
     </div>
+    <script>
+        document.getElementById("meuBotao").onclick = function() {
+        const alerta = document.getElementById("meuAlerta");
+        alerta.style.display = "block";
+        setTimeout(function() {
+        alerta.style.display = "none";
+        }, 3000); // 3000 milissegundos = 3 segundos
+    }
+    </script>
   </body>
 </html>
